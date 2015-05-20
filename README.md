@@ -34,8 +34,10 @@ The script is toggled with two buttons, one for the draw lines and one to activa
 
 These buttons are:
  - R
+
     *Enables/Disables the bot guide lines
  - T
+
     *Enables/Disables the bot
 
 License
