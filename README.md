@@ -9,8 +9,8 @@ Navigation: [Website][1] | **Script Repository** | [Agar Game][2]
 [2]: http://agar.io
 [3]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
 [4]: https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
-[5]: https://github.com/Agariomods/Agariomods-Play-Bot/blob/master/LICENSE
-[6]: https://github.com/Agariomods/Agariomods-Play-Bot/raw/master/bot.user.js
+[5]: https://github.com/Agariomods/Agariomods-Play-Bot/raw/master/bot.user.js
+[6]: https://github.com/Agariomods/Agariomods-Play-Bot/blob/master/LICENSE
 [7]: https://github.com/Irraquated
 
 Introduction
