@@ -12,6 +12,7 @@ Navigation: [Website][1] | **Script Repository** | [Agar Game][2]
 [5]: https://github.com/Agariomods/Agariomods-Play-Bot/raw/master/bot.user.js
 [6]: https://github.com/Agariomods/Agariomods-Play-Bot/blob/master/LICENSE
 [7]: https://github.com/Irraquated
+[8]: https://github.com/Apostolique
 
 Introduction
 ------------------------------------------------------------------------
@@ -49,3 +50,6 @@ Credits
 
 **Owner**
  - [Irraquated][7]
+
+**Special thanks to:**
+ - [Apostolique][8] - For the base code.
