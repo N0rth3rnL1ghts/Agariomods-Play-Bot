@@ -296,7 +296,7 @@ jQuery('#region').change(function () {
 	gamejs = gamejs.replace("b=this.name.toLowerCase();", "b=this.name.toLowerCase(); if (b.substring(0, 2) == \"i/\") {" +Ja+ "+=b;} ;");
 	gamejs = gamejs.replace('g.Raven&&g.Raven.config("https://2a85d1d3fb114384a2758cde7de2bef7@app.getsentry.com/43938",{release:"2",whitelistUrls:["agar.io/"]}).install();', "");
 	gamejs = gamejs.replace("wa=!1", "wa=!0");
-	gamejs = gamejs.replace("(c||0==g.length&&(!this.isVirus||this.isAgitated)&&20<this.size)&&", ""); */
+	gamejs = gamejs.replace("(c||0==g.length&&(!this.isVirus||this.isAgitated)&&20<this.size)&&", "");
 
 }
     var c = 1,
