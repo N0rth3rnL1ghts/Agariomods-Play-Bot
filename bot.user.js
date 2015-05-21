@@ -101,7 +101,7 @@ nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\
 		newWebSocket = new window.WebSocket_original(data);
         	return newWebSocket;
 	}else {
-		console.log("HAXXED: connecting to "+jQuery('#iphack').val()   + "(ignoring: "+data+")");
+		console.log("New Connection: connecting to "+jQuery('#iphack').val()   + "(ignoring: "+data+")");
 	}
     };
 })(window);
