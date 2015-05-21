@@ -21,7 +21,8 @@ nodeDiv.style.zIndex = 9999999999;
 nodeDiv.style.borderRadius = "5px";
 nodeDiv.style.color = "#dddddd";
 nodeDiv.style.padding = "5px";
-nodeDiv.innerHTML = "<p>Server Selector by agariomods</p>";
+nodeDiv.innerHTML = "<p>Version - 1.2.1 - Server selector"
+nodeDiv.innerHTML = "<p>Agariomods Play Bot</p>";
 nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\">Our website</small>";
 
 	jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
