@@ -8,8 +8,13 @@
 // @author      http://github.com/Irraquated
 // ==/UserScript==
 
-var modBlocking = true;
+var gamejs = "", modBlocking = true;
+var tester = document.getElementsByTagName("script");
+var i = 0, main_out_url = "http://agar.io/main_out.js", discovered_mainouturl = 0;
+var W = '';
+var Ja = '';
 var nodeDiv = document.createElement("div");
+
 nodeDiv.id = "includedContent";
 nodeDiv.style.backgroundColor = "#000000";
 nodeDiv.style.zIndex = 9999999999;
@@ -19,7 +24,7 @@ nodeDiv.style.padding = "5px";
 nodeDiv.innerHTML = "<p>Server Selector by agariomods</p>";
 nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\">Our website</small>";
 
-jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
+	jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
 	jQuery('#region').parent().get(0).appendChild(nodeDiv);
 	var selector = jQuery('#region');
 	var playBtn = jQuery('#playBtn');
