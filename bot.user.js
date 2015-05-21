@@ -273,6 +273,32 @@ jQuery('#region').change(function () {
       }
       return a
     }
+    function agariomodsRuntimeInjection() {
+	var tester = document.getElementsByTagName("html");
+	var oldhtml = tester[0].innerHTML;
+	var script = document.createElement("script");
+	agariomodsRuntimePatches();
+	script.innerHTML = gamejs;
+	document.head.appendChild(script);
+	agariomodsRuntimeHacks();
+	
+	window.onbeforeunload = function() {
+		return 'Are you sure you want to quit agar.io?';
+	};
+	}
+	function agariomodsRuntimePatches() {
+	
+	gamejs = gamejs.replace(';reddit;',';reddit;electronoob;');
+	gamejs = gamejs.replace(W + '[b]=new Image,'+W+'[b].src="skins/"+b+".png"',W +'[b]=new Image,'+W+'[b].crossOrigin = "Anonymous",'+W+'[b].src="skins/"+b+".png"');
+	gamejs = gamejs.replace('b=this.name.toLowerCase();', 'b=this.name.toLowerCase();var agariomods="";if(b == "electronoob") {agariomods="http://agariomods.com/skins/electronoob.png";} else if (b.substring(0, 2) == "i/") {agariomods="http://i.imgur.com/"+this.name.substring(2)+".jpg";} else {agariomods="http://agar.io/skins/" + this.name.toLowerCase() + ".png";}');
+	gamejs = gamejs.replace(W +'[b].src="skins/"+b+".png"',W+'[b].src=agariomods');
+	gamejs = gamejs.replace("this._stroke&&b.strokeText(c,3,e-g/2);b.fillText(c,3,e-g/2)", "if (String(c).substring(0, 2) != \"i/\") {this._stroke&&b.strokeText(c,3,e-g/2);b.fillText(c,3,e-g/2)}");
+	gamejs = gamejs.replace("b=this.name.toLowerCase();", "b=this.name.toLowerCase(); if (b.substring(0, 2) == \"i/\") {" +Ja+ "+=b;} ;");
+	gamejs = gamejs.replace('g.Raven&&g.Raven.config("https://2a85d1d3fb114384a2758cde7de2bef7@app.getsentry.com/43938",{release:"2",whitelistUrls:["agar.io/"]}).install();', "");
+	gamejs = gamejs.replace("wa=!1", "wa=!0");
+	gamejs = gamejs.replace("(c||0==g.length&&(!this.isVirus||this.isAgitated)&&20<this.size)&&", ""); */
+
+}
     var c = 1,
     e = new DataView(a.data);
     switch (e.getUint8(0)) {
