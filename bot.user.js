@@ -24,14 +24,6 @@ nodeDiv.style.padding = "5px";
 nodeDiv.innerHTML = "<p>Version - 1.2.1 - Server selector";
 nodeDiv.innerHTML += "<p>Agariomods Play Bot</p>";
 nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\">Our website</small>";
-nodeDiv.innerHTML += "\
-	<ul>\
-	  <li>1: Get ip address from friend.</li>\
-	  <li>2: Put it in text box below.</li>\
-	  <li>3: Press the swirly icon next to it.</li>\
-	  <p><b>Note:</b> Check with your friend to see whos #1 on the leaderboard</p>\
-	</ul>\
-	";
 
 	jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
 	jQuery('#region').parent().get(0).appendChild(nodeDiv);
