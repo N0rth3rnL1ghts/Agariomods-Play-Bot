@@ -18,34 +18,62 @@ nodeDiv.style.color = "#dddddd";
 nodeDiv.style.padding = "5px";
 nodeDiv.innerHTML = "<p>Server Selector by agariomods</p>";
 nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\">Our website</small>";
-jQuery('#region').parent().get(0).appendChild( document.createElement("br"));
-jQuery('#region').parent().get(0).appendChild(nodeDiv);
 
-var selector = jQuery('#region');
-var playBtn = jQuery('#playBtn');
-var nodeInput = document.createElement("input");
-var nodeBr = document.createElement("br");
-nodeInput.className = "form-control";
-nodeInput.id = "iphack";
-jQuery( playBtn ).parent().get( 0 ).appendChild(nodeBr);
-jQuery( playBtn ).parent().get( 0 ).appendChild(nodeInput);
-
-jQuery('#iphack').change(function () {
-modBlocking = false;
-});
-
-jQuery('#playBtn').off();
-$('.btn-needs-server').prop('disabled', false);
-jQuery('#playBtn').click(function() {
-	if (modBlocking == false ) {
-		jQuery('#region').val("SG-Singapore");
-		jQuery('#region').change();
-	}
-    setNick(document.getElementById('nick').value);
-    return false;
-});
-jQuery('#region').off();
-jQuery('#region').change(function () {
+jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
+	jQuery('#region').parent().get(0).appendChild(nodeDiv);
+	var selector = jQuery('#region');
+	var playBtn = jQuery('#playBtn');
+	var nodeInput = document.createElement("input");
+	var nodeSpan = document.createElement("span");
+	var nodeBr = document.createElement("br");
+	nodeSpan.className = "glyphicon glyphicon-refresh";
+	nodeSpan.style.fontSize = "1.5em";
+	nodeSpan.style.cssFloat = "left";
+	nodeSpan.style.paddingTop = "5px";
+	nodeSpan.style.paddingLeft = "15px";
+	nodeSpan.addEventListener("click", function (e) {
+	    if (modBlocking == false) {
+                        //jQuery('#region').style.height = "0px";
+                        jQuery('#region').hide();
+                        //jQuery('#gamemode').style.height = "0px";
+                        jQuery('#gamemode').hide();
+	                      console.log ("clicked refresh");
+				var oldregionval = jQuery('#region').val;
+	                      jQuery('#region').val("EU-London");
+       	               jQuery('#region').change();
+       	               jQuery('#region').val("SG-Singapore");
+			jQuery('#region').change();
+			jQuery('#region').val(oldregionval);
+			jQuery('#region').change();
+			 jQuery('#gamemode').change();
+			      //jQuery(this).fadeOut(100).fadeIn(100);
+	    }
+	});
+	nodeInput.className = "form-control";
+	nodeInput.id = "iphack"
+	nodeInput.style.width = "85%";
+	nodeInput.style.cssFloat = "left";
+	nodeInput.style.cssClear = "right";
+	nodeInput.style.border = "2px solid green";
+	nodeInput.placeholder = "Alternative server ip:port here.";
+	jQuery(playBtn).parent().get(0).appendChild(nodeBr);
+	jQuery(playBtn).parent().get(0).appendChild(nodeInput);
+	jQuery(playBtn).parent().get(0).appendChild(nodeSpan);
+	jQuery('#iphack').change(function() {
+	    if (jQuery('#iphack').val() == "") {
+	        modBlocking = true;
+	    }
+	    modBlocking = false;
+	});
+	jQuery('#playBtn').off();
+	$('.btn-needs-server').prop('disabled', false);
+	jQuery('#playBtn').click(function() {
+	    setNick(document.getElementById('nick').value);
+	    return false;
+	});
+	
+	jQuery('#region').off();
+	jQuery('#region').change(function () {
 	jQuery.ajax("http://m.agar.io/", {
             error: function() {
             },
