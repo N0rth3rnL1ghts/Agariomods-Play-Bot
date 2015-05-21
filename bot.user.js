@@ -17,7 +17,7 @@ nodeDiv.style.borderRadius = "5px";
 nodeDiv.style.color = "#dddddd";
 nodeDiv.style.padding = "5px";
 nodeDiv.innerHTML = "<p>Server Selector by agariomods</p>";
-nodeDiv.innerHTML += "<small><a href="http://agariomods.com">Agariomods.com</small>";
+nodeDiv.innerHTML += "<small><a target=\"_blank\" href=\"http://agariomods.com/\">Our website</small>";
 jQuery('#region').parent().get(0).appendChild( document.createElement("br"));
 jQuery('#region').parent().get(0).appendChild(nodeDiv);
 
