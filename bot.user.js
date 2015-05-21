@@ -31,6 +31,7 @@ nodeDiv.innerHTML += "\
 	  <li>3: Press the swirly icon next to it.</li>\
 	  <p><b>Note:</b> Check with your friend to see whos #1 on the leaderboard</p>\
 	</ul>\
+	";
 
 	jQuery('#region').parent().get(0).appendChild(document.createElement("br"));
 	jQuery('#region').parent().get(0).appendChild(nodeDiv);
