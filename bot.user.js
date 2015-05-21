@@ -20,6 +20,7 @@ nodeDiv.style.backgroundColor = "#000000";
 nodeDiv.style.zIndex = 9999999999;
 nodeDiv.style.borderRadius = "5px";
 nodeDiv.style.color = "#dddddd";
+nodeDiv.style.position = "top";
 nodeDiv.style.padding = "5px";
 nodeDiv.innerHTML = "<p>Version - 1.2.1 - Server selector</p>";
 nodeDiv.innerHTML += "<p>Agariomods Play Bot</p>";
