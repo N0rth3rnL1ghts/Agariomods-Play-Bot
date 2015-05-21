@@ -8,26 +8,16 @@
 // @author      http://github.com/Irraquated
 // ==/UserScript==
 
-// ==UserScript==
-// @name        AgarBot
-// @namespace   Apos
-// @description Plays Agar
-// @include     http://agar.io/
-// @version     1
-// @grant       none
-// @author      twitch.tv/apostolique
-// ==/UserScript==
-
-
-//Server Selection
 var modBlocking = true;
 var nodeDiv = document.createElement("div");
 nodeDiv.id = "includedContent";
 nodeDiv.style.backgroundColor = "#000000";
 nodeDiv.style.zIndex = 9999999999;
+nodeDiv.style.borderRadius = "5px";
 nodeDiv.style.color = "#dddddd";
-nodeDiv.innerHTML = "<p>Hacked interface for team play</p>";
-nodeDiv.innerHTML += "<small>Code from - https://github.com/Asexual/</small>";
+nodeDiv.style.padding = "5px";
+nodeDiv.innerHTML = "<p>Server Selector by agariomods</p>";
+nodeDiv.innerHTML += "<small><a href="http://agariomods.com">Agariomods.com</small>";
 jQuery('#region').parent().get(0).appendChild( document.createElement("br"));
 jQuery('#region').parent().get(0).appendChild(nodeDiv);
 
