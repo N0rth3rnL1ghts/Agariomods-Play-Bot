@@ -1,11 +1,9 @@
 AgarioMods Play Bot
 ========================================================================
 
-[![Join the chat at https://gitter.im/electronoob/agarmods](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/electronoob/agarmods?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Navigation: [Website][1] | **Script Repository** | [Agar Game][2]
 
-[1]: http://agariomods.com
 [2]: http://agar.io
 [3]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
 [4]: https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
